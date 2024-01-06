@@ -6,12 +6,17 @@ public class PlayerAnimator : MonoBehaviour
 {
   [Header("Elements")]
   [SerializeField] private Animator animator;
+  [Header("Settings")]
+  [SerializeField] private float moveSpeedMultiplier;
   public void ManageAnimations(Vector3 moveVector)
   {
 
     if (moveVector.magnitude > 0)
     {
+      animator.SetFloat("moveSpeed", moveVector.magnitude * moveSpeedMultiplier);
       PlayRunAnimation();
+
+      animator.transform.forward = moveVector.normalized;
     }
     else
     {

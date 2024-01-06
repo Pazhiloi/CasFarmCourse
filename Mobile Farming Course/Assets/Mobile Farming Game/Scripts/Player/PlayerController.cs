@@ -3,11 +3,12 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [RequireComponent(typeof(CharacterController))]
+[RequireComponent(typeof(PlayerAnimator))]
 public class PlayerController : MonoBehaviour
 {
   [Header("Elements")]
   [SerializeField] private MobileJoystick joystick;
-  [SerializeField] private PlayerAnimator playerAnimator;
+  private PlayerAnimator playerAnimator;
   private CharacterController characterController;
   [Header("Settings")]
   [SerializeField] private float moveSpeed;
@@ -16,6 +17,7 @@ public class PlayerController : MonoBehaviour
   private void Start()
   {
     characterController = GetComponent<CharacterController>();
+    playerAnimator = GetComponent<PlayerAnimator>();
   }
 
   private void Update()

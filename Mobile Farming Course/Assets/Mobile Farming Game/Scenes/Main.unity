@@ -932,6 +932,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animator: {fileID: 7827541571241848966}
+  rendererTransform: {fileID: 7488029580155513407}
+  moveSpeedMultiplier: 40
 --- !u!1 &1777658323
 GameObject:
   m_ObjectHideFlags: 0
