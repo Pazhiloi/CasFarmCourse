@@ -32,4 +32,8 @@ public class PlayerAnimator : MonoBehaviour
   {
     animator.Play("Idle");
   }
+  private void PlaySowAnimation()
+  {
+    animator.Play("Sow");
+  }
 }
