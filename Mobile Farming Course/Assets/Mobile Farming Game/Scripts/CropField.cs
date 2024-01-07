@@ -30,11 +30,25 @@ public class CropField : MonoBehaviour
     for (int i = 0; i < seedPositions.Length; i++)
     {
       CropTile closestCropTile = GetClosestCropTile(seedPositions[i]);
+      if (closestCropTile == null)
+      {
+       continue; 
+      }
 
-      Debug.Log(closestCropTile.name);
+      if (!closestCropTile.IsEmpty())
+      {
+        continue;
+      }
+
+      Sow(closestCropTile);
+
+
     }
   }
 
+  private void Sow(CropTile cropTile){
+    cropTile.Sow();
+  }
   private CropTile GetClosestCropTile(Vector3 seedPosition)
   {
     float minDistance = 5000;
