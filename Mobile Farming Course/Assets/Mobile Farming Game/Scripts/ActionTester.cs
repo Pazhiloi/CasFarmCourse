@@ -5,19 +5,23 @@ using UnityEngine;
 
 public class ActionTester : MonoBehaviour
 {
-    public Action myAction;
+  public Action<int> myAction;
 
 
-    private void Start() {
-      // myAction = DebugANumber;
-      // myAction += DebugAString;
-      myAction?.Invoke();
-    }
+  private void Start()
+  {
+    myAction?.Invoke(7);
+  }
 
-    private void DebugANumber(){
-      Debug.Log("5");
-    }
-    private void DebugAString(){
-      Debug.Log("Hello World");
-    }
+
+  private void IncrementInt(int myInt)
+  {
+    myInt++;
+    Debug.Log(myInt);
+  }
+  private void DoubleInt(int myInt)
+  {
+    myInt *= 2;
+    Debug.Log(myInt);
+  }
 }
