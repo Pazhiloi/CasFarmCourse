@@ -4,9 +4,60 @@ using UnityEngine;
 
 public class CropField : MonoBehaviour
 {
-    
 
-    public void SeedsCollidedCallback(Vector3[] seedPositions){
-      Debug.Log("Crop Field received the seed positions");
-    }  
+  [Header("Elements")]
+  [SerializeField] private Transform tilesParent;
+  private List<CropTile> cropTiles = new List<CropTile>();
+
+
+
+  private void Start()
+  {
+    StoreTiles();
+  }
+
+
+  private void StoreTiles(){
+    for (int i = 0; i < tilesParent.childCount; i++)
+    {
+     cropTiles.Add(tilesParent.GetChild(i).GetComponent<CropTile>());
+    }
+  }
+
+
+  public void SeedsCollidedCallback(Vector3[] seedPositions)
+  {
+    for (int i = 0; i < seedPositions.Length; i++)
+    {
+      CropTile closestCropTile = GetClosestCropTile(seedPositions[i]);
+
+      Debug.Log(closestCropTile.name);
+    }
+  }
+
+  private CropTile GetClosestCropTile(Vector3 seedPosition)
+  {
+    float minDistance = 5000;
+    int closestCropTileIndex = -1;
+
+
+    for (int i = 0; i < cropTiles.Count; i++)
+    {
+      CropTile cropTile = cropTiles[i];
+      float distanceTileSeed = Vector3.Distance(cropTile.transform.position, seedPosition);
+
+      if (distanceTileSeed < minDistance)
+      {
+        minDistance = distanceTileSeed;
+        closestCropTileIndex = i;
+      }
+    }
+
+    if (closestCropTileIndex == -1)
+    {
+      return null;
+    }
+
+    return cropTiles[closestCropTileIndex];
+  }
 }

@@ -241,7 +241,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 330585543}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.35826376, y: 0.000000022718249, z: -0.00000000871781, w: 0.93362045}
+  m_LocalRotation: {x: 0.35826376, y: -0.000000022718249, z: 0.000000008717809, w: 0.93362045}
   m_LocalPosition: {x: 0, y: 13, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -475,6 +475,80 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &607309492
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 792395082}
+    m_Modifications:
+    - target: {fileID: 513681430082024826, guid: 71aab2958f7728643b28208b3cba137a,
+        type: 3}
+      propertyPath: m_Name
+      value: Crop Tile 00 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4661667904379231794, guid: 71aab2958f7728643b28208b3cba137a,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4661667904379231794, guid: 71aab2958f7728643b28208b3cba137a,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4661667904379231794, guid: 71aab2958f7728643b28208b3cba137a,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4661667904379231794, guid: 71aab2958f7728643b28208b3cba137a,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4661667904379231794, guid: 71aab2958f7728643b28208b3cba137a,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4661667904379231794, guid: 71aab2958f7728643b28208b3cba137a,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4661667904379231794, guid: 71aab2958f7728643b28208b3cba137a,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4661667904379231794, guid: 71aab2958f7728643b28208b3cba137a,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4661667904379231794, guid: 71aab2958f7728643b28208b3cba137a,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4661667904379231794, guid: 71aab2958f7728643b28208b3cba137a,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 71aab2958f7728643b28208b3cba137a, type: 3}
+--- !u!4 &607309493 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4661667904379231794, guid: 71aab2958f7728643b28208b3cba137a,
+    type: 3}
+  m_PrefabInstance: {fileID: 607309492}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &678772615
 GameObject:
   m_ObjectHideFlags: 0
@@ -533,7 +607,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 701822941}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.35826376, y: 0.000000022718249, z: -0.00000000871781, w: 0.93362045}
+  m_LocalRotation: {x: 0.35826376, y: -0.000000022718249, z: 0.000000008717809, w: 0.93362045}
   m_LocalPosition: {x: 0, y: 13, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -610,6 +684,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1087882059}
+  - {fileID: 607309493}
   m_Father: {fileID: 1883961017}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &832575517
@@ -6259,7 +6334,7 @@ Transform:
   m_GameObject: {fileID: 1883961016}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 3.52, y: 0, z: 0}
+  m_LocalPosition: {x: 3.15, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -6278,6 +6353,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 31ffff4079a8a694a9eb577bee853f36, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  tilesParent: {fileID: 792395082}
 --- !u!65 &1883961019
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -7297,7 +7373,7 @@ PrefabInstance:
     - target: {fileID: 513681430082024826, guid: 71aab2958f7728643b28208b3cba137a,
         type: 3}
       propertyPath: m_Name
-      value: 'Crop Tile '
+      value: Crop Tile 00
       objectReference: {fileID: 0}
     - target: {fileID: 4661667904379231794, guid: 71aab2958f7728643b28208b3cba137a,
         type: 3}
