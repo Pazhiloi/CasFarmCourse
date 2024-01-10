@@ -6,19 +6,19 @@ public class CropTile : MonoBehaviour
 {
   public enum State { Empty, Sown, Watered }
   private State state;
+  [Header("Settings")]
+  [SerializeField] private Transform cropParent;
 
   private void Start()
   {
     state = State.Empty;
   }
 
-  public void Sow()
+  public void Sow(CropData cropData)
   {
     state = State.Sown;
 
-    GameObject go = GameObject.CreatePrimitive(PrimitiveType.Sphere);
-    go.transform.position = transform.position;
-    go.transform.localScale = Vector3.one  / 2;
+    Crop crop = Instantiate(cropData.cropPrefab, transform.position, Quaternion.identity, cropParent);
   }
 
   public bool IsEmpty()

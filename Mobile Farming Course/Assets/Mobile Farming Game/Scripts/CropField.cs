@@ -9,6 +9,8 @@ public class CropField : MonoBehaviour
   [SerializeField] private Transform tilesParent;
   private List<CropTile> cropTiles = new List<CropTile>();
 
+  [Header("Settings")]
+  [SerializeField] private CropData cropData;
 
 
   private void Start()
@@ -47,7 +49,7 @@ public class CropField : MonoBehaviour
   }
 
   private void Sow(CropTile cropTile){
-    cropTile.Sow();
+    cropTile.Sow(cropData);
   }
   private CropTile GetClosestCropTile(Vector3 seedPosition)
   {
