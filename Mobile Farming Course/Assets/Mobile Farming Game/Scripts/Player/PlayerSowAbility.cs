@@ -15,10 +15,12 @@ public class PlayerSowAbility : MonoBehaviour
     playerAnimator = GetComponent<PlayerAnimator>();
 
     SeedParticles.onSeedsCollided += SeedsCollidedCallback; 
+    CropField.onFullySown += CropFieldFullySownCallback;
   }
 
   private void OnDestroy() {
     SeedParticles.onSeedsCollided -= SeedsCollidedCallback;
+    CropField.onFullySown -= CropFieldFullySownCallback;
   }
 
 
@@ -31,8 +33,15 @@ public class PlayerSowAbility : MonoBehaviour
     currentCropField.SeedsCollidedCallback(seedPositions);
   }
 
+  private void CropFieldFullySownCallback(CropField cropField) {
+    if (cropField == currentCropField)
+    {
+      playerAnimator.StopSowAnimation();
+    }
+  }
+
   private void OnTriggerEnter(Collider other) {
-    if (other.CompareTag("CropField"))
+    if (other.CompareTag("CropField") && other.GetComponent<CropField>().IsEmpty())
     {
       playerAnimator.PlaySowAnimation();
       currentCropField = other.GetComponent<CropField>();
