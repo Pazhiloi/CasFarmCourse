@@ -315,7 +315,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 330585543}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.35826376, y: 0.000000022718249, z: -0.00000000871781, w: 0.93362045}
+  m_LocalRotation: {x: 0.35826376, y: -0.000000022718249, z: 0.000000008717809, w: 0.93362045}
   m_LocalPosition: {x: 0, y: 13, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -830,7 +830,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 701822941}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.35826376, y: 0.000000022718249, z: -0.00000000871781, w: 0.93362045}
+  m_LocalRotation: {x: 0.35826376, y: -0.000000022718249, z: 0.000000008717809, w: 0.93362045}
   m_LocalPosition: {x: 0, y: 13, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -1122,7 +1122,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 861183499}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1606150011}
+        m_TargetAssemblyTypeName: PlayerToolSelector, Assembly-CSharp
+        m_MethodName: SelectTool
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &861183499
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6555,7 +6567,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1271798400}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1606150011}
+        m_TargetAssemblyTypeName: PlayerToolSelector, Assembly-CSharp
+        m_MethodName: SelectTool
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 2
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1271798400
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7112,7 +7136,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1572980149}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1606150011}
+        m_TargetAssemblyTypeName: PlayerToolSelector, Assembly-CSharp
+        m_MethodName: SelectTool
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 1
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1572980149
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7249,7 +7285,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1583750057}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1606150011}
+        m_TargetAssemblyTypeName: PlayerToolSelector, Assembly-CSharp
+        m_MethodName: SelectTool
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 3
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1583750057
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7312,10 +7360,11 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1606150006}
+  - component: {fileID: 1606150008}
   - component: {fileID: 1606150007}
   - component: {fileID: 1606150009}
   - component: {fileID: 1606150010}
-  - component: {fileID: 1606150008}
+  - component: {fileID: 1606150011}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -7405,6 +7454,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 801db58ad41b2b7498379360a878b7d7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1606150011
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1606150005}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 99d4cc1d7e7ca374f8e3e8909c598a26, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  toolImages:
+  - {fileID: 861183499}
+  - {fileID: 1572980149}
+  - {fileID: 1271798400}
+  - {fileID: 1583750057}
+  selectedToolColor: {r: 0.9607843, g: 0.8117647, b: 0.35686275, a: 1}
 --- !u!1001 &1620904623
 PrefabInstance:
   m_ObjectHideFlags: 0
