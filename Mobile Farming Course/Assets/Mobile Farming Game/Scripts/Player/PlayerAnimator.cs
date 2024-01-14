@@ -6,6 +6,7 @@ public class PlayerAnimator : MonoBehaviour
 {
   [Header("Elements")]
   [SerializeField] private Animator animator;
+  [SerializeField] private ParticleSystem waterParticles;
   [Header("Settings")]
   [SerializeField] private float moveSpeedMultiplier;
   public void ManageAnimations(Vector3 moveVector)
@@ -42,10 +43,11 @@ public class PlayerAnimator : MonoBehaviour
   }
   public void PlayWaterAnimation()
   {
-    Debug.Log("Playing Water Animation");
+    animator.SetLayerWeight(2, 1);
   }
   public void StopWaterAnimation()
   {
-    Debug.Log("Stopping Water Animation");
+    animator.SetLayerWeight(2, 0);
+    waterParticles.Stop();
   }
 }
