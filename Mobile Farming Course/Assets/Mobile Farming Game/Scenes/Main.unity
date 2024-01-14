@@ -165,7 +165,7 @@ GameObject:
   - component: {fileID: 213798570}
   - component: {fileID: 213798573}
   - component: {fileID: 213798572}
-  - component: {fileID: 213798571}
+  - component: {fileID: 213798574}
   m_Layer: 0
   m_Name: Water Particles
   m_TagString: Untagged
@@ -188,18 +188,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 7488029580155513407}
   m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
---- !u!114 &213798571
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 213798569}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e7a5ac0c811c11e4282e04715441391b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!199 &213798572
 ParticleSystemRenderer:
   serializedVersion: 6
@@ -4996,6 +4984,18 @@ ParticleSystem:
         m_PostInfinity: 2
         m_RotationOrder: 4
     vectorLabel1_3: W
+--- !u!114 &213798574
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 213798569}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f30f3c3b09fdeb4ba4abfeef5f0ee7e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &271892391
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5157,7 +5157,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 330585543}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.35826376, y: 0.000000022718249, z: -0.00000000871781, w: 0.93362045}
+  m_LocalRotation: {x: 0.35826376, y: -0.000000022718249, z: 0.000000008717809, w: 0.93362045}
   m_LocalPosition: {x: 0, y: 13, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -5672,7 +5672,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 701822941}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.35826376, y: 0.000000022718249, z: -0.00000000871781, w: 0.93362045}
+  m_LocalRotation: {x: 0.35826376, y: -0.000000022718249, z: 0.000000008717809, w: 0.93362045}
   m_LocalPosition: {x: 0, y: 13, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -12206,6 +12206,7 @@ GameObject:
   - component: {fileID: 1606150007}
   - component: {fileID: 1606150009}
   - component: {fileID: 1606150010}
+  - component: {fileID: 1606150012}
   - component: {fileID: 1606150011}
   m_Layer: 0
   m_Name: Player
@@ -12314,6 +12315,18 @@ MonoBehaviour:
   - {fileID: 1271798400}
   - {fileID: 1583750057}
   selectedToolColor: {r: 0.9607843, g: 0.8117647, b: 0.35686275, a: 1}
+--- !u!114 &1606150012
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1606150005}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 412de1b537f4357408275e252db8c115, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1620904623
 PrefabInstance:
   m_ObjectHideFlags: 0

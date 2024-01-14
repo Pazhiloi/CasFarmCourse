@@ -40,4 +40,12 @@ public class PlayerAnimator : MonoBehaviour
   {
     animator.SetLayerWeight(1, 0);
   }
+  public void PlayWaterAnimation()
+  {
+    Debug.Log("Playing Water Animation");
+  }
+  public void StopWaterAnimation()
+  {
+    Debug.Log("Stopping Water Animation");
+  }
 }
