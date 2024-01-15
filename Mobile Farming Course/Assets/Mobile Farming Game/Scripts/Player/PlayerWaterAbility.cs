@@ -20,7 +20,7 @@ public class PlayerWaterAbility : MonoBehaviour
 
     WaterParticles.onWaterCollided += WaterCollidedCallback;
 
-    // CropField.onFullySown += CropFieldFullySownCallback;
+    CropField.onFullyWatered += CropFieldFullyWateredCallback;
     playerToolSelector.onToolSelected += ToolSelectedCallback;
   }
 
@@ -28,7 +28,7 @@ public class PlayerWaterAbility : MonoBehaviour
   {
     WaterParticles.onWaterCollided -= WaterCollidedCallback;
 
-    // CropField.onFullySown -= CropFieldFullySownCallback;
+    CropField.onFullyWatered -= CropFieldFullyWateredCallback;
     playerToolSelector.onToolSelected -= ToolSelectedCallback;
   }
 
