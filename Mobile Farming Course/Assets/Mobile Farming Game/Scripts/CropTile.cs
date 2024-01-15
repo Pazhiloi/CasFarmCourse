@@ -6,8 +6,10 @@ public enum TileFieldState { Empty, Sown, Watered }
 public class CropTile : MonoBehaviour
 {
   private TileFieldState state;
-  [Header("Settings")]
+  [Header("Elements")]
   [SerializeField] private Transform cropParent;
+  [SerializeField] private MeshRenderer tileRenderer;
+  private Crop crop;
 
   private void Start()
   {
@@ -18,11 +20,14 @@ public class CropTile : MonoBehaviour
   {
     state = TileFieldState.Sown;
 
-    Crop crop = Instantiate(cropData.cropPrefab, transform.position, Quaternion.identity, cropParent);
+     crop = Instantiate(cropData.cropPrefab, transform.position, Quaternion.identity, cropParent);
   }
 
   public void Water(){
     state = TileFieldState.Watered;
+    tileRenderer.material.color = Color.white * 0.3f;
+
+    crop.ScaleUp();
   }
 
   public bool IsEmpty()
