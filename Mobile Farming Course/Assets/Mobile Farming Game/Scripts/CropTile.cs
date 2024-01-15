@@ -25,10 +25,13 @@ public class CropTile : MonoBehaviour
 
   public void Water(){
     state = TileFieldState.Watered;
-    tileRenderer.material.color = Color.white * 0.3f;
 
     crop.ScaleUp();
+
+    tileRenderer.gameObject.LeanColor(Color.white * 0.3f, 1f);
   }
+
+  
 
   public bool IsEmpty()
   {
