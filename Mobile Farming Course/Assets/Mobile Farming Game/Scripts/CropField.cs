@@ -18,6 +18,7 @@ public class CropField : MonoBehaviour
 
   public static Action<CropField> onFullySown;
   public static Action<CropField> onFullyWatered;
+  public static Action<CropField> onFullyHarvested;
 
   private void Start()
   {
