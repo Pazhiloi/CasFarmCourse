@@ -85,7 +85,14 @@ public class PlayerHarvestAbility : MonoBehaviour
     {
       playerAnimator.StopHarvestAnimation();
       currentCropField = null;
-    }
+    } 
+  }
+
+  public void HarvestingStartedCallback(){
+    
+  }
+  public void HarvestingStoppedCallback(){
+
   }
 
 }
