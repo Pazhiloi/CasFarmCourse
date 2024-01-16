@@ -7,10 +7,12 @@ using UnityEngine;
 public class PlayerHarvestAbility : MonoBehaviour
 {
   [Header("Elements")]
+  [SerializeField] private Transform harvestSphere;
   private PlayerAnimator playerAnimator;
   private PlayerToolSelector playerToolSelector;
   [Header("Settings")]
   private CropField currentCropField;
+  private bool canHarvest;
 
 
   private void Start()
@@ -68,6 +70,11 @@ public class PlayerHarvestAbility : MonoBehaviour
         currentCropField = cropField;
       }
       playerAnimator.PlayHarvestAnimation();
+
+      if (canHarvest)
+      {
+        currentCropField.Harvest(harvestSphere);
+      }
     }
   }
 
@@ -89,10 +96,10 @@ public class PlayerHarvestAbility : MonoBehaviour
   }
 
   public void HarvestingStartedCallback(){
-    
+    canHarvest = true;
   }
   public void HarvestingStoppedCallback(){
-
+    canHarvest = false;
   }
 
 }
