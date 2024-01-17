@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System;
 
 public class CropTile : MonoBehaviour
 {
@@ -9,6 +10,10 @@ public class CropTile : MonoBehaviour
   [SerializeField] private Transform cropParent;
   [SerializeField] private MeshRenderer tileRenderer;
   private Crop crop;
+  private CropData cropData;
+
+  [Header("Events")]
+  public static Action<CropType> onCropHarvested;
 
   private void Start()
   {
@@ -20,6 +25,8 @@ public class CropTile : MonoBehaviour
     state = TileFieldState.Sown;
 
      crop = Instantiate(cropData.cropPrefab, transform.position, Quaternion.identity, cropParent);
+
+     this.cropData = cropData;
   }
 
   public void Water(){
@@ -35,6 +42,8 @@ public class CropTile : MonoBehaviour
     crop.ScaleDown();
 
     tileRenderer.gameObject.LeanColor(Color.white, 1f);
+
+    onCropHarvested?.Invoke(cropData.cropType);
   }
 
   
