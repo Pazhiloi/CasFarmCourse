@@ -2,7 +2,6 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public enum TileFieldState { Empty, Sown, Watered } 
 public class CropTile : MonoBehaviour
 {
   private TileFieldState state;
