@@ -3,7 +3,12 @@ guid: 5040f658c013bff4fa1b110fe44705d2
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Tomato
+    second: {fileID: 2100000, guid: dbb76168232b1df478232c6e2423a090, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
@@ -40,6 +45,7 @@ ModelImporter:
     addColliders: 0
     useSRGBMaterialColor: 1
     sortHierarchyByName: 1
+    importPhysicalCameras: 1
     importVisibility: 1
     importBlendShapes: 1
     importCameras: 1

@@ -12,5 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7b18040f72147e3479955cca600ea9cd, type: 3}
   m_Name: Tomato Data
   m_EditorClassIdentifier: 
-  cropPrefab: {fileID: 0}
+  cropPrefab: {fileID: 5628008894748937466, guid: 61785b46aa64fdb48a93e51d9b230f2b,
+    type: 3}
   cropType: 1
